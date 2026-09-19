@@ -1,0 +1,43 @@
+=============================================================
+ 1. ESP32-CAM WIRING (FLASHING VIA FTDI)
+=============================================================
+   [FTDI Programmer]                 [ESP32-CAM]
+         5V    --------------------->    5V
+         GND   --------------------->    GND
+         TX    --------------------->    U0R (GPIO 3)
+         RX    --------------------->    U0T (GPIO 1)
+
+   *CRITICAL: Connect ESP32-CAM GPIO 0 to GND to flash code.
+              Disconnect it and press RESET to run the camera.
+
+
+=============================================================
+ 2. ESP32-CAM WIRING (RUN MODE / FINAL DEPLOYMENT)
+=============================================================
+   [Standard 5V Power]               [ESP32-CAM]
+         (+) 5V  ------------------->    5V
+         (-) GND ------------------->    GND
+
+
+=============================================================
+ 3. ESP32 LED CONTROLLER & 144-LED STRIP WIRING
+=============================================================
+
+                                     [ESP32 Dev Board]
+                                   +-------------------+
+                                   |                   |
+                       +---------> | VIN (or 5V)       |
+                       |   +-----> | GND               |
+                       |   |       | GPIO 13           | ---+
+                       |   |       +-------------------+    |
+                       |   |                                | (Green Data Wire)
+                       |   |                                |
+ [5V 10A Power Supply] |   |                                |
+                       |   |                                |
+  (+) 5V RED  ---------+   |       [WS2812B 144 LED Strip]  |
+                   +---------------+ (+) 5V / VCC           |
+                   |       |                                V
+  (-) GND BLK  ----+-------+-------+ (-) GND              (DIN)
+
+   *CRITICAL: The ESP32 Dev Board and the LED Strip MUST share 
+              the same ground connection back to the power supply.

@@ -1,0 +1,9 @@
+ESP32-CAM Module (AI-Thinker model with OV2640 camera)
+ESP32 Dev Module (Standard 30-pin or 38-pin board)
+WS2812B LED Strip (144 LEDs, 5V)
+5V 10A Power Supply (Dedicated for LED strip)
+FTDI Programmer (USB-to-TTL serial adapter)
+Jumper Wires (Assorted Dupont cables)
+Breadboard
+1000µF Capacitor (Optional, for LED power supply protection)
+330Ω to 470Ω Resistor (Optional, for data line protection)
